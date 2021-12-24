@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Krona One', sans-serif;
+     
+  }
+  .header {
+    text-shadow: 1px 1px 2px white;
+  }
+  
+  body {
+    background: rgb(238,237,255);
+  background: linear-gradient(121deg, rgba(238,237,255,1) 8%, rgba(48,228,2,1) 83%);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .counter-div{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 20px 20px 60px black;
+    padding: 1rem;
+    background-color: blue;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    user-select: none;
+    transition: all 0.2s ease-out;
+    animation-name: appear;
+    animation-delay:0s;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  @keyframes appear {
+    0%{
+      opacity: 0;
+      transform:translateX(-400px);
+    }
+    50%{
+      opacity:0.5;
+      transform:translateX(100px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .counter-div:hover {
+    transform:translateY(5px);
+    background-color: mediumblue;
+  }
+  .counter-div > * {
+    margin-bottom: 2rem;
+  }
+  .count {
+    font-size: 3rem;
+    transition: all 0.4s linear;
+    text-shadow: 1px 1px 2px white;
+  }
+  .buttons button {
+    padding: 0.5rem;
+    margin: 10px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 3px 3px black;
+  transition: all 0.3s linear;
+  }
+  .buttons button:active {
+    box-shadow: 1px 1px black;
+    transform: translateY(-2px) !important;
+  }
+  .buttons button:hover {
+    transform:scale(1.1);
+    filter:brightness(1.50);
+  }
+  button.subtract {
+    background-color: orangered;
+  }
+  button.add {
+    background-color: yellow;
+  }
+  button.random {
+    background-color: orange;
+  }
