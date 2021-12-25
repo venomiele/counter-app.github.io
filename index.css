@@ -11,7 +11,7 @@
   
   body {
     background: rgb(238,237,255);
-  background: linear-gradient(121deg, rgba(238,237,255,1) 8%, rgba(48,228,2,1) 83%);
+    background: linear-gradient(121deg, rgba(238,237,255,1) 8%, rgba(48,228,2,1) 83%);
   }
   .container {
     display: flex;
@@ -20,8 +20,7 @@
     height: 100vh;
   }
   .counter-div{
-    width: 100%;
-    max-width: 500px;
+    width: 50%;
     height: auto;
     box-shadow: 20px 20px 60px black;
     padding: 1rem;
@@ -37,6 +36,7 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
   }
+
   @keyframes appear {
     0%{
       opacity: 0;
@@ -63,7 +63,7 @@
     text-shadow: 1px 1px 2px white;
   }
   .buttons button {
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin: 10px;
     font-weight: 700;
     border: none;
@@ -72,6 +72,7 @@
     box-shadow: 3px 3px black;
   transition: all 0.3s linear;
   }
+
   .buttons button:active {
     box-shadow: 1px 1px black;
     transform: translateY(-2px) !important;
@@ -89,3 +90,42 @@
   button.random {
     background-color: orange;
   }
+
+  .buttons {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  /* Media queries */
+
+  @media screen and (max-width: 1000px) {
+    .counter-div{
+        width: 80%;
+        height: auto;
+        box-shadow: 20px 20px 60px black;
+        padding: 1rem;
+        background-color: blue;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+      .buttons button {
+        padding: 0.75rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-shadow: 1px 1px 2px white;
+    font-size: 1rem;
+  }
+
+  .counter-div:hover {
+    transform:translateY(0px);
+    background-color: blue;
+  }
+
+}
